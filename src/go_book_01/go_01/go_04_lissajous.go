@@ -34,7 +34,7 @@ func main() {
 	// the pseudo-random number generator using the current time.
 	// Thanks to Randall McPherson for pointing out the omission.
 	rand.Seed(time.Now().UTC().UnixNano())
-	create, _ := os.Create("out.gif")
+	create, _ := os.Create("go_01/out.gif")
 	lissajous(create)
 }
 

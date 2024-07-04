@@ -26,13 +26,13 @@ func example1() {
 	// 哪一个通道中有可取的元素值，哪个对应的分支就会被执行。
 	select {
 	case <-intChannels[0]:
-		fmt.Println("The first candidate case is selected.")
+		fmt.Println("The first candidate oop is selected.")
 	case <-intChannels[1]:
-		fmt.Println("The second candidate case is selected.")
+		fmt.Println("The second candidate oop is selected.")
 	case elem := <-intChannels[2]:
-		fmt.Printf("The third candidate case is selected, the element is %d.\n", elem)
+		fmt.Printf("The third candidate oop is selected, the element is %d.\n", elem)
 	default:
-		fmt.Println("No candidate case is selected!")
+		fmt.Println("No candidate oop is selected!")
 	}
 }
 
@@ -46,9 +46,9 @@ func example2() {
 	select {
 	case _, ok := <-intChan:
 		if !ok {
-			fmt.Println("The candidate case is closed.")
+			fmt.Println("The candidate oop is closed.")
 			break
 		}
-		fmt.Println("The candidate case is selected.")
+		fmt.Println("The candidate oop is selected.")
 	}
 }

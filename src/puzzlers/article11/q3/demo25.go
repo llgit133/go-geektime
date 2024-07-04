@@ -13,13 +13,13 @@ var numbers = []int{1, 2, 3}
 func main() {
 	select {
 	case getChan(0) <- getNumber(0):
-		fmt.Println("The first candidate case is selected.")
+		fmt.Println("The first candidate oop is selected.")
 	case getChan(1) <- getNumber(1):
-		fmt.Println("The second candidate case is selected.")
+		fmt.Println("The second candidate oop is selected.")
 	case getChan(2) <- getNumber(2):
-		fmt.Println("The third candidate case is selected")
+		fmt.Println("The third candidate oop is selected")
 	default:
-		fmt.Println("No candidate case is selected!")
+		fmt.Println("No candidate oop is selected!")
 	}
 }
 
