@@ -4,37 +4,37 @@ import (
 	"fmt"
 )
 
-type Student struct {
+type Worker struct {
 	Name   string
 	Age    uint8
 	Gender Gender
 }
 
 // Run 成员方法
-func (*Student) Run() {
-	fmt.Println("Student run ")
+func (*Worker) Run() {
+	fmt.Println("Worker run ")
 }
 
-func (*Student) Sleep() {
-	fmt.Println("Student sleep ")
+func (*Worker) Sleep() {
+	fmt.Println("Worker sleep ")
 }
 
 func StudentCase() {
 
-	student1 := Student{
-		Name:   "student1",
+	worker1 := Worker{
+		Name:   "worker1",
 		Age:    18,
 		Gender: MALE,
 	}
-	student1.Run()
-	student1.Sleep()
-	fmt.Println("student1", student1)
+	worker1.Run()
+	worker1.Sleep()
+	fmt.Println("worker1", worker1)
 	fmt.Println("======================================")
 
-	student2 := Student{}
-	student2.Run()
-	student2.Sleep()
-	fmt.Println("student2", student2)
+	worker2 := Worker{}
+	worker2.Run()
+	worker2.Sleep()
+	fmt.Println("worker2", worker2)
 	fmt.Println("======================================")
 
 }

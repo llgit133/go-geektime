@@ -21,6 +21,7 @@ type User struct {
 }
 
 // Run 成员方法
+// 需要 USer的具体实例，才能调用Run方法
 func (User) Run() {
 	fmt.Println("user run ")
 }
@@ -87,5 +88,9 @@ user.Sleep() // OK
 userPtr := &User{}
 userPtr.Run()  // OK, Go 自动解引用
 userPtr.Sleep() // OK, Go 自动解引用
+
+
+结构体属性
+结构体方法
 
 */
