@@ -57,7 +57,7 @@ var s string = ""
 
 
 2.for循环
-Go 语言只有 for 循环这一种循环语句。for 循环有多种形式，
+Go 语言只有 for 循环这一种循环语句  无while do while。for 循环有多种形式，
 
 for i := 1; i < len(os.Args); i++ {
 		s += sep + os.Args[i]

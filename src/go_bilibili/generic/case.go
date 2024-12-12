@@ -2,6 +2,7 @@ package _generic
 
 import "fmt"
 
+// 泛型测试
 // Student  结构体
 type Student struct {
 	Name   string

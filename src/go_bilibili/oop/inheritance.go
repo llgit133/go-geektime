@@ -36,12 +36,12 @@ func (tch Teacher) Teach() {
 	fmt.Printf("teacher %d is teaching...\n", tch.TeacherId)
 }
 
-func main() {
-	var stu = Student{Person{"Alice", 12}, 100}
-	stu.PrintInfo() // name = Alice, age = 12
-	stu.Study()     // student 100 is studying...
-
-	var tch = Teacher{&Person{"Bob", 22}, 200}
-	tch.PrintInfo() // name = Bob, age = 22
-	tch.Teach()     // teacher 200 is teaching...
-}
+//func main() {
+//	var stu = Student{Person{"Alice", 12}, 100}
+//	stu.PrintInfo() // name = Alice, age = 12
+//	stu.Study()     // student 100 is studying...
+//
+//	var tch = Teacher{&Person{"Bob", 22}, 200}
+//	tch.PrintInfo() // name = Bob, age = 22
+//	tch.Teach()     // teacher 200 is teaching...
+//}

@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	_exception "go_book_01/exception"
-	_generic "go_book_01/generic"
-	_interface "go_book_01/interface"
-	_oop "go_book_01/oop"
+	_exception "go_bilibili/exception"
+	_generic "go_bilibili/generic"
+	_interface "go_bilibili/interface"
+	_oop "go_bilibili/oop"
 )
 
 func main() {
@@ -45,4 +45,33 @@ func main() {
 
 	// 参数预计算
 	_exception.DeferCase()
+
+	// oop -1 封装
+	fmt.Println("-----oop -1 封装----")
+	pet := &_oop.Pet{}
+	pet.SetName("111")
+	pet.SetAge(2)
+	pet.SetGender("3")
+
+	println(pet.GetName())
+	println(pet.GetAge())
+	println(pet.GetGender())
+
+	pet.Print()
+
+	// oop -2 继承
+	fmt.Println("-----oop -2 继承----")
+	var stu = _oop.Student{_oop.Person{"Alice", 12}, 100}
+	stu.PrintInfo() // name = Alice, age = 12
+	stu.Study()     // student 100 is studying...
+
+	var tch = _oop.Teacher{&_oop.Person{"Bob", 22}, 200}
+	tch.PrintInfo() // name = Bob, age = 22
+	tch.Teach()     // teacher 200 is teaching...
+
+	//有无方法重写
+
+	// oop -3 多态
+	fmt.Println("-----oop -3 多态----")
+
 }

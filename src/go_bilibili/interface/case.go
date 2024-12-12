@@ -2,6 +2,8 @@ package _interface
 
 import "fmt"
 
+// 接口测试
+
 // Student  结构体
 type Student struct {
 	Name   string

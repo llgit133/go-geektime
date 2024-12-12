@@ -46,5 +46,5 @@ func main() {
 
 /**
 
-四种类型——数组、slice、map和结构体
+四种类型—— 数组、slice、map、结构体
 */

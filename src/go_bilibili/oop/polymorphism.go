@@ -34,10 +34,10 @@ func InterfaceAssert(value interface{}) {
 	}
 }
 
-func main() {
-	phone := Phone{}
-	camera := Camera{}
-
-	InterfaceAssert(phone)  // main.Phone implemented the Usb interface...
-	InterfaceAssert(camera) // main.Camera does not implemented the Usb interface...
-}
+//func main() {
+//	phone := Phone{}
+//	camera := Camera{}
+//
+//	InterfaceAssert(phone)  // main.Phone implemented the Usb interface...
+//	InterfaceAssert(camera) // main.Camera does not implemented the Usb interface...
+//}

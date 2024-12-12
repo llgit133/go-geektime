@@ -2,6 +2,8 @@ package _exception
 
 import "fmt"
 
+// 异常处理
+
 type AA struct {
 	Name string
 }
@@ -68,7 +70,7 @@ func DeferCase() {
 	}()
 	i = 99
 	return
-	
+
 	// 栈的顺序
 	//defer i 100
 	//defer j 2

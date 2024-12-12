@@ -18,7 +18,7 @@ func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32) }
 func FToC(f Fahrenheit) Celsius { return Celsius((f - 32) * 5 / 9) }
 
 // 该方法返回该类型对象c带着°C温度单位的字符串
-// 许多类型都会定义一个String方法，因为当使用fmt包的打印方法时，将会优先使用该类型对应的String方法返回的结果打印
+// 许多类型都会定义一个String方法，因为当使用fmt包的打印方法时，将会优先使用该类型对应的String方法返回的结果打印--类似与方法重写
 func (c Celsius) String() string { return fmt.Sprintf("%g°C", c) }
 
 func (c Celsius) printString() string { return fmt.Sprintf("%g°C", c) }
