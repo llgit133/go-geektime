@@ -11,7 +11,7 @@ type Usb interface {
 
 type Phone struct{}
 
-// Phone实现Usb接口的所有方法
+// Start Phone实现Usb接口的所有方法
 func (p Phone) Start() {
 	fmt.Println("phone start working...")
 }
@@ -21,7 +21,7 @@ func (p Phone) Stop() {
 
 type Camera struct{}
 
-// Camera只实现Usb接口的Start方法
+// Start Camera只实现Usb接口的Start方法
 func (c Camera) Start() {
 	fmt.Println("camera start working...")
 }

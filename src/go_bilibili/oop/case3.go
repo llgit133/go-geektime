@@ -48,4 +48,7 @@ User Name: Alice
 BB Name: Charlie
 BB Name: Dave
 
+如果结构体字段需要被修改，或结构体较大，使用指针接收者。
+如果方法是只读操作或结构体较小，使用值接收者。
+
 */

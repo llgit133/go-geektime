@@ -26,6 +26,11 @@ func (User) Run() {
 	fmt.Println("user run ")
 }
 
+// Run 非成员方法
+func Run() {
+	fmt.Println(" run ")
+}
+
 func (User) Sleep() {
 	fmt.Println("user sleep ")
 }
@@ -33,52 +38,50 @@ func (User) Sleep() {
 // UserCase 对象实例化
 func UserCase() {
 
-	user1 := User{
-		Name:   "zhangsan",
-		Age:    10,
-		Gender: MALE,
-	}
-	user1.Run()
-	user1.Sleep()
-	fmt.Println("user1:", user1)
-	fmt.Println("======================================")
+	fmt.Println("================1. 直接初始化字段================")
+	user0 := User{"1111", 9, FEMALE}
+	fmt.Println("user0:", user0)
 
-	user2 := new(User)
-	user2.Name = "lisi"
-	user2.Age = 20
-	user2.Gender = FEMALE
-	user1.Run()
-	user1.Sleep()
-	fmt.Println("user2", user2)
-	fmt.Println("======================================")
-
+	fmt.Println("===============值类型的实例=======================")
 	user3 := User{}
-	user3.Run()
-	user3.Sleep()
 	user3.Name = "wangwu"
 	user3.Age = 30
 	user3.Gender = THIRD
 	fmt.Println("user3", user3)
-	fmt.Println("======================================")
 
+	Run()
+
+	fmt.Println("================2. 基于字段名的初始化======================")
+	user1 := User{
+		Name:   "2222",
+		Age:    10,
+		Gender: MALE,
+	}
+	fmt.Println("user1:", user1)
+
+	fmt.Println("================3. 使用 new 函数======================")
+
+	user2 := new(User)
+	user2.Name = "3333"
+	user2.Age = 20
+	user2.Gender = FEMALE
+	fmt.Println("user2", user2)
+
+	// 以下为常用的方式
+	fmt.Println("==================指针类型初始化1====================")
+	user5 := &User{"5555", 40, THIRD}
+	fmt.Println("user5", user5)
+
+	fmt.Println("==================指针类型2====================")
 	user4 := &User{}
-	user4.Run()
-	user4.Sleep()
 	user4.Name = "wangwu"
 	user4.Age = 40
 	user4.Gender = THIRD
 	fmt.Println("user3", user3)
-	fmt.Println("======================================")
 
 }
 
 /**
-值类型 (user1)：直接使用结构体字面值初始化，适用于需要值语义的场景。
-指针类型 (user2 和 user3)：使用 new 或 & 创建指针，适用于需要引用语义或共享对象的场景。
-访问方式：虽然 user2 和 user3 是指针类型，但 Go 语言自动处理指针解引用，所以访问字段和方法的方式与值类型一致。
-
-
-
 
 自动解引用：
 user := User{}
